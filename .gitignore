@@ -1,0 +1,31 @@
+# User specific & automatically generated files #
+#################################################
+app/Config/database.php
+/app/tmp
+/app/webroot/error_log
+/app/webroot/files
+/app/webroot/groupFiles
+/app/webroot/video
+/lib/Cake/
+/lib/Cake/Console/Templates/skel/tmp/
+/plugins
+/vendors
+/build
+/dist
+/tags
+*.mo
+
+# IDE and editor specific files #
+#################################
+.idea
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
