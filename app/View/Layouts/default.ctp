@@ -1,63 +1,125 @@
-<?php
-/**
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org CakePHP(tm) Project
- * @package       app.View.Layouts
- * @since         CakePHP(tm) v 0.10.0.1076
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
- */
-
-$cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
-$cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
-?>
 <!DOCTYPE html>
-<html>
-<head>
-	<?php echo $this->Html->charset(); ?>
-	<title>
-		<?php echo $cakeDescription ?>:
-		<?php echo $this->fetch('title'); ?>
-	</title>
-	<?php
-		echo $this->Html->meta('icon');
-
-		echo $this->Html->css('cake.generic');
-
-		echo $this->fetch('meta');
-		echo $this->fetch('css');
-		echo $this->fetch('script');
-	?>
-</head>
-<body>
-	<div id="container">
-		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
-		</div>
-		<div id="content">
-
-			<?php echo $this->Flash->render(); ?>
-
-			<?php echo $this->fetch('content'); ?>
-		</div>
-		<div id="footer">
-			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'http://www.cakephp.org/',
-					array('target' => '_blank', 'escape' => false, 'id' => 'cake-powered')
-				);
-			?>
-			<p>
-				<?php echo $cakeVersion; ?>
-			</p>
-		</div>
-	</div>
-	<?php echo $this->element('sql_dump'); ?>
-</body>
+<?php
+    header("Cache-Control: no-store, no-cache, must-revalidate"); // HTTP/1.1
+    header("Cache-Control: post-check=0, pre-check=0", false);
+    header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
+    header("Pragma: no-cache"); // HTTP/1.0
+    header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
+    header("Content-Type: text/html; charset=UTF-8"); 
+    header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
+    header('P3P: CP="ALL ADM DEV PSAi COM OUR OTRo STP IND ONL"');    
+?>
+<html lang="en">
+    <head>
+        <?php echo $this->Html->charset(); ?>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+        <!--<meta http-equiv="X-UA-Compatible" content="IE=8" >-->
+        <?php echo $this->Html->meta('icon'); ?>
+        <meta name="viewport" content="initial-scale = 1,maximum-scale = 1,user-scalable=no" />
+        <?php echo $this->fetch('meta'); ?>
+        
+        <title><?php echo $title_for_layout; ?> - <?php echo Configure::read('App.SiteName'); ?></title>
+        
+        <!---- scriptsTop ---->
+        <?php $this->start('scriptsTop'); ?>
+            <?php #echo $this->Html->script('jquery/jquery-2.1.0.min'); ?>
+            <?php #echo $this->Html->script('chosen.jquery.min'); ?>
+            <?php #echo $this->Html->script('bootstrap/bootstrap'); ?>
+            
+        <?php $this->end('scriptsTop'); ?>
+        <!---- /scriptsTop ---->
+        
+        <!---- scriptslib ---->
+        <?php $this->start('script'); ?>
+            
+        <?php $this->end('script'); ?>
+        <!---- /scriptslib ---->
+        <!-- Include Jquery and visible.js-->
+    
+        <!---- scriptsBottom ---->
+        <?php $this->start('scriptsBottom'); ?>
+            <?php echo $this->Html->script('jquery.js'); ?>
+            <?php echo $this->Html->script('jquery.visible.js'); ?>
+            <?php echo $this->Html->script('jquery.themepunch.plugins.min.js'); ?>
+            <?php echo $this->Html->script('jquery.themepunch.revolution.min.js'); ?>
+            <?php echo $this->Html->script('owl.carousel.min.js'); ?>
+            <?php echo $this->Html->script('jquery.mixitup.min.js'); ?>
+            <?php echo $this->Html->script('jquery.magnific-popup.min.js'); ?>
+            <?php echo $this->Html->script('jquery.imgpreload.min.js'); ?>
+            <?php echo $this->Html->script('general.js'); ?>
+            <?php echo $this->Html->script('bootstrap.min.js'); ?>
+            <?php echo $this->Html->script('holder.js'); ?>
+        <?php $this->end('scriptsBottom'); ?>
+        <!---- /scriptsBottom ---->
+        
+        <!---- csslib ---->
+        <?php $this->start('csslib'); ?>
+            <!-- The styles -->
+            <?php echo $this->Html->css('bootstrap.css'); ?>
+            <?php echo $this->Html->css('magnific-popup.css'); ?>
+            <?php echo $this->Html->css('owl.carousel.css'); ?>
+            <?php echo $this->Html->css('owl.theme.css'); ?>
+            <?php echo $this->Html->css('settings.css'); ?>
+            <?php echo $this->Html->css('style.css'); ?>
+            
+            <?php echo $this->Html->css('https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css');?>
+            <?php echo $this->Html->css('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');?>
+        <?php $this->end('csslib'); ?>
+        <!---- /csslib ---->
+        
+        <?php echo $this->fetch('scriptsTop'); ?>
+        <?php echo $this->fetch('csslib'); ?>
+        <!--Couple of added google fonts -->
+        <link href="http://fonts.googleapis.com/css?family=Sonsie+One|Old+Standard+TT" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Cabin:400,600italic" rel="stylesheet" type="text/css">
+        <meta name="google-site-verification" content="Y6694A7kDZ3tkNg6nkZ9hzgeeNSt7fh4FThjygxRJ0Q" />
+    </head>
+    <body>
+        <div id="contenedor">
+            <?php echo $this->element('default_header'); ?>
+            <div id="body" class="container">
+                <div class="offset-help">
+                    <noscript>
+                        <div class="alert alert-block col-md-12">
+                            <h4 class="alert-heading">Warning!</h4>
+                            <p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> enabled to use this site.</p>
+                        </div>
+                    </noscript>
+                    <?php echo $this->element('breadcrumbs'); ?>
+                    <?php echo $this->Session->flash(); ?>
+                    <?php echo $this->Session->flash('auth'); ?>
+                    <!--PRINCIPAL CONTENT-->
+                    <?php echo $this->fetch('content'); ?>
+                    <!-- /PRINCIPAL CONTENT -->
+                </div>
+            </div>
+            
+            <?php echo $this->element('default_footer'); ?>
+        
+        </div>
+        <!-- Normal Model -->
+        <div class="modal fade in" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                </div> <!-- /.modal-content -->
+            </div> <!-- /.modal-dialog -->
+        </div> <!-- /.modal -->
+        <?php echo $this->fetch('script'); ?>
+        <?php echo $this->fetch('scriptsBottom'); ?>
+        
+        <script type="text/javascript">
+            jQuery(window).ready( function($) {
+                $("#myModal").on('hidden.bs.modal', function () {
+                    $(this).data('bs.modal', null);
+                });
+            });
+            //Preload images
+            App.preloadImg();
+      
+            $(document).ready(function(){
+                //initialize the javascript
+                App.init();
+            });
+        </script>
+    </body>
 </html>

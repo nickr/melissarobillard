@@ -11,10 +11,20 @@
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                             </button>
                         </div>
-                    
+                        
                         <div class="navbar-collapse collapse">
                             <ul id="menu" class="nav navbar-nav text-center">
-                                <li class="active"><a href="index.html">Home</a></li>
+                                <!--
+                                <li class="active">
+                                    <?php
+                                    echo $this->Html->link(
+                                        'Home',
+                                        array('controller'=>'pages', 'action'=>'index'),
+                                        array('escape'=>false)
+                                    );
+                                    ?>
+                                </li>
+                                
                                 <li><a href="#" class="dropdow-toggle" data-toggle="dropdown">Features <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="features-cols.html">Columns</a></li>
@@ -56,9 +66,26 @@
                                         <li><a href="portfolio-single.html">Single detail view</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="contact.html">Contact</a></li>
+                                
+                                <li>
+                                    
+                                    <?php
+                                    echo $this->Html->link(
+                                        'Contact',
+                                        array('controller'=>'pages', 'action'=>'contact'),
+                                        array(
+                                            'escape'=>false,
+                                            'data-toggle'=>'modal', 
+                                            'data-target'=>'#myModal',
+                                        )
+                                    );
+                                    ?>
+                                    
+                                </li>
+                                -->
                             </ul>
                         </div>
+                        
                     </div>
                 </div>
             </div>
