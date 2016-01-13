@@ -20,7 +20,7 @@
                         <ul class="contact" id="contact">
                             <li><i class="fa fa-map-marker fa-fw"></i>Abilene - Texas</li>
                             <li><i class="fa fa-phone fa-fw"></i>(325) 260-5685</li>
-                            <li><i class="fa fa-envelope fa-fw"></i>melissa@melissarobillard.com</li>
+                            <li><i class="fa fa-envelope fa-fw"></i>melissa@ewdd.com</li>
                         </ul>
                     </div>
                 </div>
