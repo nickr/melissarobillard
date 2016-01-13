@@ -1,7 +1,9 @@
 <IfModule mod_rewrite.c>
 	RewriteEngine on
-	RewriteRule ^$ app/webroot/ [L]
+	RewriteRule ^harmonyfamilyservices - [L]
     
-    RewriteRule ((?!harmonyfamilyservices).*) app/webroot/$1 [L]
-	#RewriteRule (.*) app/webroot/$1 [L]
+    RewriteRule ^$ app/webroot/ [L]
+    
+    #RewriteRule ((?!harmonyfamilyservices).*) app/webroot/$1 [L]
+	RewriteRule (.*) app/webroot/$1 [L]
 </IfModule>
