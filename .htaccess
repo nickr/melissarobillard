@@ -2,6 +2,6 @@
 	RewriteEngine on
 	RewriteRule ^$ app/webroot/ [L]
     
-    RewriteRule ((?!harmony).*) app/webroot/$1 [L]
+    RewriteRule ((?!harmonyfamilyservices).*) app/webroot/$1 [L]
 	#RewriteRule (.*) app/webroot/$1 [L]
 </IfModule>
