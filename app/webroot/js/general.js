@@ -14,13 +14,13 @@ var App = function () {
 
     var the_images = [];
 
-    the_images.push('images/head-bg.png');
-    the_images.push('images/menu-left-corner.png');
-    the_images.push('images/menu-right-corner.png');
-    the_images.push('images/menu-bg2.png');
-    the_images.push('images/dropdownmenu-bg.png');
-    the_images.push('images/bg1.png');
-    the_images.push('images/headerlogo-02.png');
+    the_images.push('img/head-bg.png');
+    the_images.push('img/menu-left-corner.png');
+    the_images.push('img/menu-right-corner.png');
+    the_images.push('img/menu-bg2.png');
+    the_images.push('img/dropdownmenu-bg.png');
+    the_images.push('img/bg1.png');
+    the_images.push('img/headerlogo-02.png');
 
     jQuery.imgpreload(the_images,
     {
@@ -74,7 +74,7 @@ var App = function () {
       if(config.sliderRevolution){
         //SliderRevolution
         $('.tp-banner').revolution({
-          delay:9000,
+          delay:5000,
           startheight:470,
           fullWidht:"on",
           hideThumbs:10,
