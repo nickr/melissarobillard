@@ -1,6 +1,6 @@
 <IfModule mod_rewrite.c>
 	RewriteEngine on
-	RewriteRule ^harmonyfamilyservices /~meli7490/harmony [L]
+	RewriteRule ^harmonyfamilyservices  [L]
     
     RewriteRule ^$ app/webroot/ [L]
     
