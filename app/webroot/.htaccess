@@ -1,6 +1,12 @@
 <IfModule mod_rewrite.c>
-	RewriteEngine On
-	RewriteCond %{REQUEST_FILENAME} !-d
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteRule ^ index.php [L]
+	RewriteBase     /app/webroot/
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+    
+    
+    #RewriteCond %{DOCUMENT_ROOT}%{REQUEST_FILENAME} !-f
+    #RewriteCond %{DOCUMENT_ROOT}%{REQUEST_FILENAME} !-d
+    #RewriteCond %{DOCUMENT_ROOT}%{REQUEST_FILENAME} !-l                                                                                                                                                                              
+    #RewriteRule ^/(.*)$ /index.php?rt=$1 [L,QSA]
 </IfModule>
