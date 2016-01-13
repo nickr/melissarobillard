@@ -74,8 +74,10 @@ class PagesController extends AppController {
 		}
 	}
     
-    public function design(){
-        $this->layout = 'design';
-        
+    public function index(){
+    }
+    
+    public function contact(){
+        $this->Render = "blank_nojs";
     }
 }
