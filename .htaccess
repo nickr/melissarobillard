@@ -1,6 +1,6 @@
 <IfModule mod_rewrite.c>
    RewriteEngine on
-   RewriteRule ^~meli7490/harmony - [L] 
+   RewriteRule ^www.harmonyfamilyservices.com/~meli7490/harmony - [L] 
    
    www.harmonyfamilyservices.org/~meli7490/harmony/
    RewriteCond %{HTTP_HOST} ^melissarobillard.com$ [NC]
