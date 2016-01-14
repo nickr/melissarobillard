@@ -1,8 +1,10 @@
 <IfModule mod_rewrite.c>
    RewriteEngine on
    RewriteCond %{REQUEST_URI} !^/harmony/
+   RewriteCond %{REQUEST_URI} !^/nicholas/
    RewriteRule    ^$ app/webroot/    [L]
    
    RewriteCond %{REQUEST_URI} !^/harmony/
+   RewriteCond %{REQUEST_URI} !^/nicholas/
    RewriteRule    (.*) app/webroot/$1 [L]
 </IfModule>
