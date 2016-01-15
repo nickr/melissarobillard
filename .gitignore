@@ -1,7 +1,7 @@
 # User specific & automatically generated files #
 #################################################
 app/Config/database.php
-/app/tmp
+/app/tmp/
 /app/webroot/error_log
 /app/webroot/files
 /app/webroot/groupFiles
