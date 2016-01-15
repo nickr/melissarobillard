@@ -100,7 +100,7 @@
             <h3 class="title">Title</h3>
             <a class="prev">‹</a>
             <a class="next">›</a>
-            <a class="close">×</a>
+            <a class="close"><i class="fa fa-close"></i></a>
             <!-- The modal dialog, which will be used to wrap the lightbox content -->    
         </div>
         <?php echo $this->fetch('scriptsBottom'); ?>
