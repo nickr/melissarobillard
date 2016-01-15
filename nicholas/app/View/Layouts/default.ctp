@@ -104,7 +104,7 @@
             <!-- Controls for the borderless lightbox -->
             <h3 class="title">Title</h3>
             <a class="prev"><i class="fa fa-chevron-left"></i></a>
-            <a class="next"><i class="fa fa-chevron-right fa-sm"></i></a>
+            <a class="next"><i class="fa fa-chevron-right"></i></a>
             <a class="close"><i class="fa fa-close"></i></a>
             <!-- The modal dialog, which will be used to wrap the lightbox content -->    
         </div>
