@@ -72,7 +72,12 @@
         <!--Couple of added google fonts -->
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
         
-        
+        <style type="text/css">
+        gallery>.prev, .blueimp-gallery>.next {
+            height: 0px;
+            font-size: 14px;
+        }
+        </style>
     </head>
     <body>
         <div class="topbar animated fadeInLeftBig"></div>
