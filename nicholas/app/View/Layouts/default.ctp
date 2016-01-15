@@ -74,6 +74,7 @@
         
         <style type="text/css">
         .blueimp-gallery>.prev, .blueimp-gallery>.next {
+            height: 30px;
             font-size: 14px;
         }
         </style>
